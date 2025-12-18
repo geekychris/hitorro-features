@@ -1,0 +1,25 @@
+    by way of relevance we mean given a set of candidate items and some kind of question, we are able to provide a subset of the candidate
+items that meet the question and optionally order the results by most likely to meet answer the question
+
+features of a post for selecting posts in an rss river
+======================================================
+
+amount of words in title.
+amount of words in text.
+number of images.
+ratio of title to body text.
+number of links.
+number of links that do not share the same tld.
+how many things share this post.
+how old is the post from this current point in time.
+distance from some dynamic target document (the tech one document): this could be document collection of all positive examples.
+ratio of how many posts this person posts over the complete set of shares.
+how many links to themself do they do (like engadget)
+ratio of positive to negative examples an author has.
+ratio of positive to negative examples a sharer has.
+
+These inputs can be used as input to a polynomial function or:
+
+if we are using a learning algorithm then we need to associate this features set (document) with examples that show either a user rating of -1 +1 or a scale.
+
+

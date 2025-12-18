@@ -1,0 +1,5 @@
+implement "addIndices"
+  this must move them to the index dir
+
+  Consider using delta encoding for the id storage
+  

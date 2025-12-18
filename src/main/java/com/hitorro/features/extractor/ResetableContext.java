@@ -1,0 +1,20 @@
+package com.hitorro.features.extractor;
+
+/**
+ * Something that implements this is used as a way to store state between extractors.  It is assumed that any extractor
+ * within a thread may pluck a value or values from this and have stable execution. For example, one could imagine a
+ * WordCountingResetableContext.  You preconstruct a key (which is an instance of the compContext, but which is not to be
+ * used in extraction.  The constructed key could be for body or title, or perhaps both sets of wordcounts.  When any of
+ * its get methods (unique words, total words, sentences, etc) is called, either it computes them all in advance, or it
+ * computes them demand based.  But the assumption that this RC has the ability to share compContext between extractors.
+ * <p/>
+ * It further can be used to share compute costs for such things as parsing text.  ResetableContexts can make use of
+ * other resetable contexts for this reason (imagine word count uses the compContext of "Inverter"
+ */
+public interface ResetableContext<T extends ResetableContext> {
+    T getInstance(ExtractionContext ec);
+
+    void reset();
+
+    void deinit();
+}

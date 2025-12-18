@@ -1,0 +1,89 @@
+package com.hitorro.features.collections;
+
+import com.hitorro.features.RealmId;
+
+import java.util.List;
+
+/**
+ * User: chris
+ */
+public class CascadingCollection extends BaseCollection {
+    BaseCollection bcArray[];
+
+    public CascadingCollection(List<BaseCollection> collections) {
+        bcArray = new BaseCollection[collections.size()];
+        for (int i = 0; i < collections.size(); i++) {
+            bcArray[i] = collections.get(i);
+        }
+    }
+
+    public float score(int index, final long[] ids, final FeatureCollectionContext fcc) {
+        BaseCollection bc = getFirstWithID(index, ids, fcc);
+        if (bc == null) {
+            return Float.MIN_VALUE;
+        }
+        return bc.score(index, ids, fcc);
+    }
+
+    public byte getByte(int index, long ids[], FeatureCollectionContext fcc) {
+        BaseCollection bc = getFirstWithID(index, ids, fcc);
+        if (bc == null) {
+            return Byte.MIN_VALUE;
+        }
+        return bc.getByte(index, ids, fcc);
+    }
+
+    public short getShort(int index, long ids[], FeatureCollectionContext fcc) {
+        BaseCollection bc = getFirstWithID(index, ids, fcc);
+        if (bc == null) {
+            return Short.MIN_VALUE;
+        }
+        return bc.getShort(index, ids, fcc);
+    }
+
+    public long getLong(int index, long ids[], FeatureCollectionContext fcc) {
+        BaseCollection bc = getFirstWithID(index, ids, fcc);
+        if (bc == null) {
+            return Long.MIN_VALUE;
+        }
+        return bc.getLong(index, ids, fcc);
+    }
+
+    public int getInt(int index, long ids[], FeatureCollectionContext fcc) {
+        BaseCollection bc = getFirstWithID(index, ids, fcc);
+        if (bc == null) {
+            return Integer.MIN_VALUE;
+        }
+        return bc.getInt(index, ids, fcc);
+    }
+
+    public double getDouble(int index, long ids[], FeatureCollectionContext fcc) {
+        BaseCollection bc = getFirstWithID(index, ids, fcc);
+        if (bc == null) {
+            return Double.MIN_VALUE;
+        }
+        return bc.getDouble(index, ids, fcc);
+    }
+
+
+    public BaseCollection cloneMe() {
+        return null;
+    }
+
+    public RealmId exists(int index, final long[] ids, final FeatureCollectionContext fcc) {
+        BaseCollection bc = getFirstWithID(index, ids, fcc);
+        if (bc == null) {
+            return null;
+        }
+        return bc.realmId;
+    }
+
+    private BaseCollection getFirstWithID(int index, final long[] ids, final FeatureCollectionContext fcc) {
+        for (BaseCollection bc : bcArray) {
+            if (bc.exists(index, ids, fcc) != null) {
+                return bc;
+            }
+        }
+        return null;
+    }
+}
