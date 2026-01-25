@@ -19,7 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package ht.features.collections.mapping;
+package com.hitorro.features.collections.mapping;
 
 import com.hitorro.features.collections.mapping.ScoreFunctionBase;
 import com.hitorro.util.core.params.HTProperties;

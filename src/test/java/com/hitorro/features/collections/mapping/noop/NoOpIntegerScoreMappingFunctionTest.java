@@ -19,7 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package ht.features.collections.mapping.noop;
+package com.hitorro.features.collections.mapping.noop;
 
 import com.hitorro.features.collections.mapping.noop.NoOpIntegerScoreMappingFunction;
 import com.hitorro.util.core.params.HTProperties;

@@ -77,7 +77,6 @@ ls -lh target/
 
 ```java
 import com.hitorro.features.FeatureEngine;
-import ht.features.*;
 import com.hitorro.jsontypesystem.propreaders.JVSProperties;
 
 // Initialize the feature engine

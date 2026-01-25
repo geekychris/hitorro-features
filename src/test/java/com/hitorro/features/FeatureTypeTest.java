@@ -19,7 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package ht.features;
+package com.hitorro.features;
 
 import com.hitorro.features.DerivedFeature;
 import com.hitorro.features.Feature;

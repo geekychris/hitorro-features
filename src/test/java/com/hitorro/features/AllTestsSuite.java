@@ -19,10 +19,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package ht.features;
+package com.hitorro.features;
 
-import ht.features.collections.mapping.ScoreFunctionBaseTest;
-import ht.features.collections.mapping.noop.*;
+import com.hitorro.features.collections.mapping.ScoreFunctionBaseTest;
+import com.hitorro.features.collections.mapping.noop.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 

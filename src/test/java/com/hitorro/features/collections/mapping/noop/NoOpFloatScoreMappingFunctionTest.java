@@ -19,27 +19,27 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package ht.features.collections.mapping.noop;
+package com.hitorro.features.collections.mapping.noop;
 
-import com.hitorro.features.collections.mapping.noop.NoOpByteScoreMappingFunction;
+import com.hitorro.features.collections.mapping.noop.NoOpFloatScoreMappingFunction;
 import com.hitorro.util.core.params.HTProperties;
 import com.hitorro.features.collections.FeatureCollectionContext;
-import com.hitorro.features.collections.mapping.intf.ByteScoreMappingFunction;
+import com.hitorro.features.collections.mapping.intf.FloatScoreMappingFunction;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Unit tests for NoOpByteScoreMappingFunction
+ * Unit tests for NoOpFloatScoreMappingFunction
  */
-public class NoOpByteScoreMappingFunctionTest {
+public class NoOpFloatScoreMappingFunctionTest {
 
-    private NoOpByteScoreMappingFunction mappingFunction;
+    private NoOpFloatScoreMappingFunction mappingFunction;
     private FeatureCollectionContext mockContext;
 
     @Before
     public void setUp() {
-        mappingFunction = new NoOpByteScoreMappingFunction();
+        mappingFunction = new NoOpFloatScoreMappingFunction();
         HTProperties props = new HTProperties();
         mappingFunction.init(props);
         mockContext = null; // Context not used in this implementation
@@ -47,66 +47,90 @@ public class NoOpByteScoreMappingFunctionTest {
 
     @Test
     public void testScoreReturnsFloatValue() {
-        byte value = 10;
+        float value = 100.5f;
         float score = mappingFunction.score(value, mockContext);
-        assertEquals(10.0f, score, 0.0f);
+        assertEquals(100.5f, score, 0.0f);
     }
 
     @Test
     public void testScoreWithZero() {
-        byte value = 0;
+        float value = 0.0f;
         float score = mappingFunction.score(value, mockContext);
         assertEquals(0.0f, score, 0.0f);
     }
 
     @Test
     public void testScoreWithNegativeValue() {
-        byte value = -10;
+        float value = -99.99f;
         float score = mappingFunction.score(value, mockContext);
-        assertEquals(-10.0f, score, 0.0f);
+        assertEquals(-99.99f, score, 0.0001f);
     }
 
     @Test
-    public void testScoreWithMaxByte() {
-        byte value = Byte.MAX_VALUE;
+    public void testScoreWithMaxFloat() {
+        float value = Float.MAX_VALUE;
         float score = mappingFunction.score(value, mockContext);
-        assertEquals((float) Byte.MAX_VALUE, score, 0.0f);
+        assertEquals(Float.MAX_VALUE, score, 0.0f);
     }
 
     @Test
-    public void testScoreWithMinByte() {
-        // Byte.MIN_VALUE is the NULL constant, so it returns default value
-        byte value = Byte.MIN_VALUE;
+    public void testScoreWithMinFloat() {
+        float value = Float.MIN_VALUE;
         float score = mappingFunction.score(value, mockContext);
         assertEquals(Float.MIN_VALUE, score, 0.0f);
     }
 
     @Test
     public void testScoreWithNullValue() {
-        byte nullValue = ByteScoreMappingFunction.NULL;
+        float nullValue = FloatScoreMappingFunction.NULL;
         float score = mappingFunction.score(nullValue, mockContext);
-        assertEquals(Float.MIN_VALUE, score, 0.0f);
+        assertEquals(FloatScoreMappingFunction.NULL, score, 0.0f);
     }
 
     @Test
-    public void testDefaultValueIsSet() {
-        assertEquals(Float.MIN_VALUE, mappingFunction.getDefaultValue(), 0.0f);
+    public void testDefaultValueIsNull() {
+        // NoOpFloatScoreMappingFunction uses NULL as default
+        assertEquals(FloatScoreMappingFunction.NULL, mappingFunction.getDefaultValue(), 0.0f);
     }
 
     @Test
     public void testScorePreservesValue() {
-        // Test that score is a simple cast from byte to float
-        for (byte b = -128; b < 127; b++) {
-            if (b != ByteScoreMappingFunction.NULL) {
-                float expected = (float) b;
-                float actual = mappingFunction.score(b, mockContext);
-                assertEquals(expected, actual, 0.0f);
-            }
+        // Test various float values
+        float[] testValues = {-1000.5f, -1.0f, 0.0f, 1.0f, 3.14159f, 1000.999f};
+        
+        for (float value : testValues) {
+            float score = mappingFunction.score(value, mockContext);
+            assertEquals(value, score, 0.0001f);
         }
     }
 
     @Test
     public void testImplementsInterface() {
-        assertTrue(mappingFunction instanceof ByteScoreMappingFunction);
+        assertTrue(mappingFunction instanceof FloatScoreMappingFunction);
+    }
+
+    @Test
+    public void testScoreWithInfinity() {
+        float posInf = Float.POSITIVE_INFINITY;
+        float negInf = Float.NEGATIVE_INFINITY;
+        
+        assertEquals(posInf, mappingFunction.score(posInf, mockContext), 0.0f);
+        assertEquals(negInf, mappingFunction.score(negInf, mockContext), 0.0f);
+    }
+
+    @Test
+    public void testScoreWithNaN() {
+        float nan = Float.NaN;
+        float score = mappingFunction.score(nan, mockContext);
+        assertTrue(Float.isNaN(score));
+    }
+
+    @Test
+    public void testInitSetsDefaultValue() {
+        NoOpFloatScoreMappingFunction newFunction = new NoOpFloatScoreMappingFunction();
+        HTProperties props = new HTProperties();
+        newFunction.init(props);
+        
+        assertEquals(FloatScoreMappingFunction.NULL, newFunction.getDefaultValue(), 0.0f);
     }
 }
