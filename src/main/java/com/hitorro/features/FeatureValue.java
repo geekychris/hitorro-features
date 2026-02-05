@@ -199,26 +199,26 @@ public class FeatureValue extends FeatureSetKey {
         DataType dt = DataType.context.getByOrdinal(ByteUtil.getHighPartOfShortAsInt(ioCode));
         switch (dt) {
             case byteType:
-                value = new Byte(os.readByte());
+                value = Byte.valueOf(os.readByte());
                 break;
             case shortType:
-                value = new Short(os.readShort());
+                value = Short.valueOf(os.readShort());
                 break;
 
             case integerType:
-                value = new Integer(os.readInt());
+                value = Integer.valueOf(os.readInt());
                 break;
 
             case longType:
-                value = new Long(os.readLong());
+                value = Long.valueOf(os.readLong());
                 break;
 
             case floatType:
-                value = new Float(os.readFloat());
+                value = Float.valueOf(os.readFloat());
                 break;
 
             case doubleType:
-                value = new Double(os.readDouble());
+                value = Double.valueOf(os.readDouble());
                 break;
 
             case stringType:
