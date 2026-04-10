@@ -26,9 +26,7 @@ import com.hitorro.features.collections.FeatureCollectionContext;
 import com.hitorro.features.collections.mapping.intf.FloatScoreMappingFunction;
 import com.hitorro.features.io.FloatIO;
 
-/**
- *
- */
+
 public class DenseFloatFC extends DenseFeatureCollection<FloatScoreMappingFunction, FloatIO> {
     private float[] arr;
     private float nullValue;

@@ -26,9 +26,7 @@ import com.hitorro.features.collections.FeatureCollectionContext;
 import com.hitorro.features.collections.mapping.intf.DoubleScoreMappingFunction;
 import com.hitorro.features.io.DoubleIO;
 
-/**
- *
- */
+
 public class DenseDoubleFC extends DenseFeatureCollection<DoubleScoreMappingFunction, DoubleIO> {
     private double[] arr;
     private double nullValue;

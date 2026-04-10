@@ -29,9 +29,7 @@ import com.hitorro.features.collections.mapping.intf.ScoreMappingFunction;
 import com.hitorro.features.io.BaseIO;
 import com.hitorro.features.io.MappingFunction;
 
-/**
- *
- */
+
 public abstract class DenseFeatureCollection<S extends ScoreMappingFunction, B extends BaseIO>
         extends BaseCollection<S> {
     private MappingFunction mapFunction;

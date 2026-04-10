@@ -26,9 +26,7 @@ import com.hitorro.features.collections.FeatureCollectionContext;
 import com.hitorro.features.collections.mapping.intf.StringScoreMappingFunction;
 import com.hitorro.features.io.StringIO;
 
-/**
- *
- */
+
 public class DenseStringFC extends DenseFeatureCollection<StringScoreMappingFunction, StringIO> {
     private String[] arr;
     private String nullValue;

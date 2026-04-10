@@ -26,9 +26,7 @@ import com.hitorro.features.collections.FeatureCollectionContext;
 import com.hitorro.features.collections.mapping.intf.LongScoreMappingFunction;
 import com.hitorro.features.io.LongIO;
 
-/**
- *
- */
+
 public class DenseLongFC extends DenseFeatureCollection<LongScoreMappingFunction, LongIO> {
     private long[] arr;
     private long nullValue;

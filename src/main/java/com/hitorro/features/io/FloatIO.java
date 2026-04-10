@@ -27,9 +27,7 @@ import com.hitorro.util.io.largedata.compressedstreams.COutputStream;
 
 import java.io.IOException;
 
-/**
- *
- */
+
 public class FloatIO implements BaseIO<FloatIO, Float>, FloatIntf {
     private float d;
 

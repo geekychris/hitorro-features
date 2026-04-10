@@ -30,9 +30,7 @@ import com.hitorro.util.startupframework.phases.ServiceDefinition;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- */
+
 
 @ServiceDefinition(dependentService = {},
         shortName = "features",

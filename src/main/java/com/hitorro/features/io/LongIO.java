@@ -27,9 +27,7 @@ import com.hitorro.util.io.largedata.compressedstreams.COutputStream;
 
 import java.io.IOException;
 
-/**
- *
- */
+
 public class LongIO implements BaseIO<LongIO, Long>, LongIntf {
     private long d;
 

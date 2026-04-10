@@ -29,9 +29,7 @@ import com.hitorro.features.collections.mapping.intf.DoubleScoreMappingFunction;
 import com.hitorro.features.collections.mapping.noop.NoOpDoubleScoreMappingFunction;
 import com.hitorro.features.io.DoubleIO;
 
-/**
- *
- */
+
 public class SparseDoubleFC extends SparseFeatureCollection<DoubleScoreMappingFunction, DoubleIO, TLongDoubleHashMap> {
     public SparseDoubleFC() {
         super();

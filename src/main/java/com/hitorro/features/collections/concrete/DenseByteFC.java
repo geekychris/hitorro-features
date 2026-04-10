@@ -26,9 +26,7 @@ import com.hitorro.features.collections.FeatureCollectionContext;
 import com.hitorro.features.collections.mapping.intf.ByteScoreMappingFunction;
 import com.hitorro.features.io.ByteIO;
 
-/**
- *
- */
+
 public class DenseByteFC extends DenseFeatureCollection<ByteScoreMappingFunction, ByteIO> {
     private byte[] arr;
     private byte nullValue;

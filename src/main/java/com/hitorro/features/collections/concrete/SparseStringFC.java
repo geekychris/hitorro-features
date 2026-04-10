@@ -29,9 +29,7 @@ import com.hitorro.features.collections.mapping.intf.StringScoreMappingFunction;
 import com.hitorro.features.collections.mapping.noop.NoOpStringScoreMappingFunction;
 import com.hitorro.features.io.StringIO;
 
-/**
- *
- */
+
 public class SparseStringFC extends SparseFeatureCollection<StringScoreMappingFunction, StringIO, TLongObjectHashMap<String>> {
 
     public SparseStringFC() {

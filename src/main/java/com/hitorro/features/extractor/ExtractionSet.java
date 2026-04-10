@@ -27,9 +27,7 @@ import com.hitorro.util.typesystem.BaseFields;
 
 import java.util.List;
 
-/**
- *
- */
+
 public class ExtractionSet<O> {
     private FeatureExtractor<O> feArr[];
 

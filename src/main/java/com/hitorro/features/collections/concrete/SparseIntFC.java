@@ -29,9 +29,7 @@ import com.hitorro.features.collections.mapping.intf.IntegerScoreMappingFunction
 import com.hitorro.features.collections.mapping.noop.NoOpIntegerScoreMappingFunction;
 import com.hitorro.features.io.IntegerIO;
 
-/**
- *
- */
+
 public class SparseIntFC extends SparseFeatureCollection<IntegerScoreMappingFunction, IntegerIO, TLongIntHashMap> {
 
 

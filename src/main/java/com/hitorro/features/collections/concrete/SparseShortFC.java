@@ -30,9 +30,7 @@ import com.hitorro.features.collections.mapping.intf.ShortScoreMappingFunction;
 import com.hitorro.features.collections.mapping.noop.NoOpShortScoreMappingFunction;
 import com.hitorro.features.io.ShortIO;
 
-/**
- *
- */
+
 public class SparseShortFC extends SparseFeatureCollection<ShortScoreMappingFunction, ShortIO, TLongShortHashMap> {
 
 

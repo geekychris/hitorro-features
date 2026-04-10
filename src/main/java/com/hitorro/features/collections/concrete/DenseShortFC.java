@@ -26,9 +26,7 @@ import com.hitorro.features.collections.FeatureCollectionContext;
 import com.hitorro.features.collections.mapping.intf.ShortScoreMappingFunction;
 import com.hitorro.features.io.ShortIO;
 
-/**
- *
- */
+
 public class DenseShortFC extends DenseFeatureCollection<ShortScoreMappingFunction, ShortIO> {
     private short[] arr;
     private short nullValue;

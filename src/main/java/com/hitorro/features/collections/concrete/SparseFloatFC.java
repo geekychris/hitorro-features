@@ -29,9 +29,7 @@ import com.hitorro.features.collections.mapping.intf.FloatScoreMappingFunction;
 import com.hitorro.features.collections.mapping.noop.NoOpFloatScoreMappingFunction;
 import com.hitorro.features.io.FloatIO;
 
-/**
- *
- */
+
 public class SparseFloatFC extends SparseFeatureCollection<FloatScoreMappingFunction, FloatIO, TLongFloatHashMap> {
 
     public SparseFloatFC() {

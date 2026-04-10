@@ -27,9 +27,7 @@ import com.hitorro.util.io.largedata.compressedstreams.COutputStream;
 
 import java.io.IOException;
 
-/**
- *
- */
+
 public class ShortIO implements BaseIO<ShortIO, Short>, ShortIntf {
     private short d;
 

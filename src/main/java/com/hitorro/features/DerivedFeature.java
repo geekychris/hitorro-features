@@ -32,9 +32,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-/**
- *
- */
+
 public class DerivedFeature extends Feature {
     public static final StringListFromDelimitedKey Mappings = new StringListFromDelimitedKey("mapping", "", ",", new ArrayList());
 

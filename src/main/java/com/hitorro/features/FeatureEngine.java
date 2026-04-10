@@ -35,9 +35,7 @@ import com.hitorro.util.json.keys.propaccess.PropaccessError;
 
 import java.util.*;
 
-/**
- *
- */
+
 public class FeatureEngine {
     public static final String RootKey = "features";
     public static final String MappersKey = "mappers";

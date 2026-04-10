@@ -41,9 +41,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- */
+
 @ServiceDefinition(dependentService = {},
         shortName = "extractorpipeline",
         description = "Extraction processing service",

@@ -29,9 +29,7 @@ import com.hitorro.util.json.keys.StringProperty;
 
 import java.util.List;
 
-/**
- *
- */
+
 public class ExtractorDefinition {
     public static final int NoImplEC = 1;
     public static final int NotFeatureExtractorClasslEC = 2;

@@ -32,9 +32,7 @@ import com.hitorro.util.json.keys.StringProperty;
 import com.hitorro.util.typesystem.BaseFields;
 import com.hitorro.util.typesystem.valuesource.ValueSourceForClass;
 
-/**
- *
- */
+
 public class IntFieldExtractor extends FeatureExtractor<ValueSourceForClass> {
     public static final StringProperty SectionKey = new StringProperty("field", "", null);
 

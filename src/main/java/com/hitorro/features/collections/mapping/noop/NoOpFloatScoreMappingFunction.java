@@ -25,9 +25,7 @@ import com.hitorro.features.collections.FeatureCollectionContext;
 import com.hitorro.features.collections.mapping.intf.FloatScoreMappingFunction;
 import com.hitorro.util.core.params.HTProperties;
 
-/**
- *
- */
+
 public class NoOpFloatScoreMappingFunction implements FloatScoreMappingFunction {
     public float defaultVal;
 

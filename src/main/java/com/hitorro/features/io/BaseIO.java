@@ -27,9 +27,7 @@ import com.hitorro.util.io.largedata.compressedstreams.COutputStream;
 
 import java.io.IOException;
 
-/**
- *
- */
+
 public interface BaseIO<T extends BaseIO, E> extends ValueIntf<E> {
 
     BaseIO cloneIO();

@@ -26,9 +26,7 @@ import com.hitorro.features.collections.FeatureCollectionContext;
 import com.hitorro.features.collections.mapping.intf.IntegerScoreMappingFunction;
 import com.hitorro.features.io.IntegerIO;
 
-/**
- *
- */
+
 public class DenseIntFC extends DenseFeatureCollection<IntegerScoreMappingFunction, IntegerIO> {
     private int[] arr;
     private int nullValue;

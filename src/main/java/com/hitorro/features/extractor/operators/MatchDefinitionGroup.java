@@ -27,9 +27,7 @@ import com.hitorro.features.extractor.FeatureExtractor;
 import com.hitorro.util.core.HTAssert;
 import com.hitorro.util.core.opers.HTPredicate;
 
-/**
- *
- */
+
 public class MatchDefinitionGroup implements HTPredicate<Feature> {
     private String group;
 

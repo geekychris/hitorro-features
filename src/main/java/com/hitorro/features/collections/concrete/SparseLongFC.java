@@ -30,9 +30,7 @@ import com.hitorro.features.collections.mapping.intf.LongScoreMappingFunction;
 import com.hitorro.features.collections.mapping.noop.NoOpLongScoreMappingFunction;
 import com.hitorro.features.io.LongIO;
 
-/**
- *
- */
+
 public class SparseLongFC extends SparseFeatureCollection<LongScoreMappingFunction, LongIO, TLongLongHashMap> {
     public SparseLongFC() {
         super();

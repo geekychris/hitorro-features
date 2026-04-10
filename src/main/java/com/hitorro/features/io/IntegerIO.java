@@ -27,9 +27,7 @@ import com.hitorro.util.io.largedata.compressedstreams.COutputStream;
 
 import java.io.IOException;
 
-/**
- *
- */
+
 public class IntegerIO implements BaseIO<IntegerIO, Integer>, IntegerIntf {
     private int d;
 

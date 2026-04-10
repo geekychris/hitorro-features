@@ -24,9 +24,7 @@ package com.hitorro.features;
 import java.util.HashMap;
 import java.util.Set;
 
-/**
- *
- */
+
 public enum FeatureType {
     base("base", true) {
         public Feature getFeatureInstance() {

@@ -27,9 +27,7 @@ import com.hitorro.util.io.largedata.compressedstreams.COutputStream;
 
 import java.io.IOException;
 
-/**
- *
- */
+
 public class DoubleIO implements BaseIO<DoubleIO, Double>, DoubleIntf {
     private double d;
 
