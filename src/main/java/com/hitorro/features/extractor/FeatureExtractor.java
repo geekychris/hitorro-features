@@ -34,9 +34,9 @@ import java.util.List;
  * Base implementation of an extractor.  Subclass this for a real extractor.
  */
 public abstract class FeatureExtractor<O> {
-    public static final StringProperty Description = new StringProperty("description", "", null);
-    public static final StringListFromDelimitedKey InputFields = new StringListFromDelimitedKey("inputfields", "", ",", new ArrayList());
-    public static final BooleanProperty Scratch = new BooleanProperty("scratch", "", false);
+    public static StringProperty Description = new StringProperty("description", "", null);
+    public static StringListFromDelimitedKey InputFields = new StringListFromDelimitedKey("inputfields", "", ",", new ArrayList());
+    public static BooleanProperty Scratch = new BooleanProperty("scratch", "", false);
     protected JsonNode props;
     protected boolean isScratch;
     protected String[] inputFields;

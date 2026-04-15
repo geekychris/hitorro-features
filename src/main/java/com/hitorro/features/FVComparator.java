@@ -37,9 +37,9 @@ import java.util.Comparator;
  * id
  */
 public class FVComparator implements Comparator<FeatureValue> {
-    public static final FVComparator SetComp = new FVComparator(CompType.set);
+    public static FVComparator SetComp = new FVComparator(CompType.set);
 
-    public static final FVComparator IDComp = new FVComparator(CompType.id);
+    public static FVComparator IDComp = new FVComparator(CompType.id);
     private CompType ct;
 
     private FVComparator(CompType ct) {

@@ -36,7 +36,7 @@ import java.io.IOException;
  * User: chris
  */
 public class FloatLogNorm extends FloatIO implements FloatIntf, MappingFunction<FloatIO, FloatIO> {
-    public static final IntegerProperty BaseKey = new IntegerProperty("base", "The logarithm base used for normalization uses", 15);
+    public static IntegerProperty BaseKey = new IntegerProperty("base", "The logarithm base used for normalization uses", 15);
     private FloatIO out;
     private String name;
     private double logV = 1 / Math.log(16);

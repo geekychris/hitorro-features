@@ -27,7 +27,7 @@ import java.util.Comparator;
  * User: chris
  */
 public class FSetKeyComparator implements Comparator<FeatureSetKey> {
-    public static final FSetKeyComparator KeyComp = new FSetKeyComparator();
+    public static FSetKeyComparator KeyComp = new FSetKeyComparator();
 
 
     private FSetKeyComparator() {

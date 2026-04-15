@@ -34,7 +34,7 @@ import com.hitorro.util.typesystem.valuesource.ValueSourceForClass;
 
 
 public class IntFieldExtractor extends FeatureExtractor<ValueSourceForClass> {
-    public static final StringProperty SectionKey = new StringProperty("field", "", null);
+    public static StringProperty SectionKey = new StringProperty("field", "", null);
 
     private String field;
 

@@ -49,13 +49,13 @@ import java.util.List;
         typeManagedClasses = {}
 )
 public class ExtractionProcessingService {
-    public static final StringProperty ExtractorGroupKey = new StringProperty("extractor.processing.groups", "", "a");
-    public static final IntegerProperty ExtractorInputQueueLengthKey =
+    public static StringProperty ExtractorGroupKey = new StringProperty("extractor.processing.groups", "", "a");
+    public static IntegerProperty ExtractorInputQueueLengthKey =
             new IntegerProperty("extractor.processing.inputqlength", "Input queue length", 1000);
-    public static final IntegerProperty ExtractorThreadCountKey =
+    public static IntegerProperty ExtractorThreadCountKey =
             new IntegerProperty("extractor.processing.threadcount", "Extractor thread count", 4);
 
-    public static final IntegerProperty ExtractorOutputQueueLengthKey =
+    public static IntegerProperty ExtractorOutputQueueLengthKey =
             new IntegerProperty("extractor.processing.outputqlength", "Output queue length", 1000);
 
     private static final String ShortName = "ExtractorPipeline";

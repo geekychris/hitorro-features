@@ -33,9 +33,9 @@ import java.util.List;
 public class ExtractorDefinition {
     public static final int NoImplEC = 1;
     public static final int NotFeatureExtractorClasslEC = 2;
-    public static final StringProperty Description = new StringProperty("description", "", null);
+    public static StringProperty Description = new StringProperty("description", "", null);
 
-    public static final ClassProperty Impl = new ClassProperty("class", "", null);
+    public static ClassProperty Impl = new ClassProperty("class", "", null);
 
     private String name;
     private String description;

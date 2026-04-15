@@ -27,7 +27,7 @@ import com.hitorro.util.log.Logger;
  * Logging utilities for the features package
  */
 public class Log extends com.hitorro.util.core.Log {
-    public static final Logger fvextractor = Logger.getLogger("ht.fvextractor");
-    public static final Logger feature = Logger.getLogger("ht.feature");
-    public static final Logger featureIndex = Logger.getLogger("ht.featureindex");
+    public static Logger fvextractor = Logger.getLogger("ht.fvextractor");
+    public static Logger feature = Logger.getLogger("ht.feature");
+    public static Logger featureIndex = Logger.getLogger("ht.featureindex");
 }

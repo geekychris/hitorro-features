@@ -43,33 +43,33 @@ import java.util.Map;
  * Feature defines all the meta information about what a feature is all about.
  */
 public class Feature {
-    public static final ValidatedStringProperty FeatureTypeKey =
+    public static ValidatedStringProperty FeatureTypeKey =
             new ValidatedStringProperty("ftype", "Feature type",
                     FeatureType.getDefault().getName(), FeatureType.getValidValues());
-    public static final StringProperty NameKey =
+    public static StringProperty NameKey =
             new StringProperty("name", "", null);
-    public static final StringProperty RootKey =
+    public static StringProperty RootKey =
             new StringProperty("rootname", "", null);
-    public static final EnumProperty<DataType> DataTypeKey = new EnumProperty<DataType>("type", "", null, DataType.context);
-    public static final EnumProperty<FeatureCardinality> CardinalityKey = new EnumProperty<FeatureCardinality>("cardinality", "", FeatureCardinality.single, FeatureCardinality.context);
-    public static final EnumProperty<FeatureKeyType> KeyTypeKey = new EnumProperty<FeatureKeyType>("keytype", "", FeatureKeyType.document, FeatureKeyType.context);
-    public static final EnumProperty<PartitionModel> SegmentationKey = new EnumProperty<PartitionModel>("segmentation", "", PartitionModel.None, PartitionModel.context) {
+    public static EnumProperty<DataType> DataTypeKey = new EnumProperty<DataType>("type", "", null, DataType.context);
+    public static EnumProperty<FeatureCardinality> CardinalityKey = new EnumProperty<FeatureCardinality>("cardinality", "", FeatureCardinality.single, FeatureCardinality.context);
+    public static EnumProperty<FeatureKeyType> KeyTypeKey = new EnumProperty<FeatureKeyType>("keytype", "", FeatureKeyType.document, FeatureKeyType.context);
+    public static EnumProperty<PartitionModel> SegmentationKey = new EnumProperty<PartitionModel>("segmentation", "", PartitionModel.None, PartitionModel.context) {
         public String getName(DataType e) {
             return e.getName().toLowerCase();
         }
     };
     // keys for derived
-    public static final StringProperty RootFeatureKey = new StringProperty("root", "", null);
-    public static final StringListFromDelimitedKey Groups = new StringListFromDelimitedKey("groups", "", ",", new ArrayList());
-    public static int ErrNoName = 1;
-    public static int ErrNoCardinality = 2;
-    public static int ErrNoDataType = 3;
-    public static int ErrNoSegmentationModel = 4;
-    public static int ErrNoRootFeature = 5;
-    public static int ErrNoKeyTypeModel = 6;
-    public static int ErrNoExtractorName = 20;
-    public static int ErrNoExtractorDefinitionName = 21;
-    public static int ErrNoExtractorImplName = 22;
+    public static StringProperty RootFeatureKey = new StringProperty("root", "", null);
+    public static StringListFromDelimitedKey Groups = new StringListFromDelimitedKey("groups", "", ",", new ArrayList());
+    public static final int ErrNoName = 1;
+    public static final int ErrNoCardinality = 2;
+    public static final int ErrNoDataType = 3;
+    public static final int ErrNoSegmentationModel = 4;
+    public static final int ErrNoRootFeature = 5;
+    public static final int ErrNoKeyTypeModel = 6;
+    public static final int ErrNoExtractorName = 20;
+    public static final int ErrNoExtractorDefinitionName = 21;
+    public static final int ErrNoExtractorImplName = 22;
     protected String name;
     protected DerivedFeature[] derived;
     protected DataType dataType;
