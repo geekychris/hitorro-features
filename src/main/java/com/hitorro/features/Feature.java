@@ -150,6 +150,10 @@ public class Feature {
         return keyType;
     }
 
+    public void setKeyType(FeatureKeyType keyType) {
+        this.keyType = keyType;
+    }
+
     public boolean init(List<ErrorCode> errList,
                         String propsPath,
                         JsonNode map,

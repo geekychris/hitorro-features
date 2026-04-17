@@ -25,23 +25,17 @@ import com.hitorro.jsontypesystem.propreaders.JVSProperties;
 import com.hitorro.util.core.error.ErrorCode;
 import com.hitorro.util.core.string.Fmt;
 import com.hitorro.util.json.keys.propaccess.PropaccessError;
-import com.hitorro.util.startupframework.phases.ServiceDefinition;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
-
-@ServiceDefinition(dependentService = {},
-        shortName = "features",
-        description = "Feature machinery",
-        debugCommands = {},
-        typeManagedClasses = {FeatureSetKey.class, FeatureValue.class, RealmId.class}
-)
+/**
+ * Feature service - initializes the feature engine.
+ */
 public class FeatureService {
     public String init(boolean dbInit, final boolean upgrading, final long currentVersion, final long targetVersion) {
         FeatureEngine fe = new FeatureEngine();
-        List<ErrorCode> codes = new ArrayList();
+        List<ErrorCode> codes = new ArrayList<>();
         try {
             fe.init(codes, JVSProperties.getProperties());
         } catch (PropaccessError e) {
@@ -61,7 +55,6 @@ public class FeatureService {
     public String start(boolean dbInit) {
         return null;
     }
-
 
     public String deInit() {
         return null;
