@@ -111,7 +111,7 @@ public class FeatureIndexFileReader extends FeatureIndexReader implements Compar
     }
 
     public void resetDictIter() throws IOException {
-        dictIs = new FSInputStream(dictionaryFile);
+        dictIs = new FSInputStream(new java.io.File(dictionaryFile.getAbsolutePath()));
     }
 
     public PostingsFeatureReader getReader(FeatureSetKey fsk, Feature feature,

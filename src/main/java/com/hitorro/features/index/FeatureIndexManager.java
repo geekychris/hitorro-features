@@ -199,8 +199,8 @@ public class FeatureIndexManager {
         BaseFile postingsTmp = rootDir.getChild("%s.%stmp", newName, FeatureIndexManager.PostingsExt);
 
         BaseFile dictionaryTmp = rootDir.getChild("%s.%stmp", newName, FeatureIndexManager.DictionaryExt);
-        FSOutputStream postingsOS = new FSOutputStream(postingsTmp);
-        FSOutputStream dictionaryOS = new FSOutputStream(dictionaryTmp);
+        FSOutputStream postingsOS = new FSOutputStream(new java.io.File(postingsTmp.getAbsolutePath()));
+        FSOutputStream dictionaryOS = new FSOutputStream(new java.io.File(dictionaryTmp.getAbsolutePath()));
 
         Queue<Iterator<FeatureSetKey>> q = new LinkedList();
         for (FeatureIndexFileReader fileReader : indicesSubset) {
@@ -355,7 +355,7 @@ class CachedPostingsReader {
         PostingsFeatureReader reader = cachedPostingsReaders.get(fifr);
         if (reader == null) {
             reader = new PostingsFeatureReader();
-            reader.set(new FSInputStream(postingFile));
+            reader.set(new FSInputStream(new java.io.File(postingFile.getAbsolutePath())));
             cachedPostingsReaders.put(fifr, reader);
         }
         return reader;

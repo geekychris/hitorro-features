@@ -117,8 +117,8 @@ public class FeatureIndexer {
         dictionary = directory.getChild("%s-0.%s", t, FeatureIndexManager.DictionaryExt);
         postingsTmp = directory.getChild("%s-0.%stmp", t, FeatureIndexManager.PostingsExt);
         dictionaryTmp = directory.getChild("%s-0.%stmp", t, FeatureIndexManager.DictionaryExt);
-        postingsOS = new FSOutputStream(postingsTmp);
-        dictionaryOS = new FSOutputStream(dictionaryTmp);
+        postingsOS = new FSOutputStream(new java.io.File(postingsTmp.getAbsolutePath()));
+        dictionaryOS = new FSOutputStream(new java.io.File(dictionaryTmp.getAbsolutePath()));
         lk.setKey(0);
         fsk = null;
         return true;
