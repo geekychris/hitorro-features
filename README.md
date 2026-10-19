@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" alt="Hitorro Features logo" width="180">
+</p>
+
 # hitorro-features
 
 Feature extraction, indexing, and processing engine for ML pipelines and search ranking.
