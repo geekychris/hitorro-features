@@ -21,7 +21,7 @@
  */
 package com.hitorro.features.extractor;
 
-import com.fasterxml.jackson.databind.JsonNode;
+import tools.jackson.databind.JsonNode;
 import com.hitorro.util.core.classes.ClassUtil;
 import com.hitorro.util.core.error.ErrorCode;
 import com.hitorro.util.json.keys.ClassProperty;

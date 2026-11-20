@@ -157,7 +157,7 @@ Each DataType provides factory methods for I/O (`getCopyOfIO()`), sparse collect
 <dependency>
     <groupId>com.hitorro</groupId>
     <artifactId>hitorro-features</artifactId>
-    <version>3.0.1</version>
+    <version>4.0.0</version>
 </dependency>
 ```
 
