@@ -21,7 +21,7 @@
  */
 package com.hitorro.features.io.normalizer;
 
-import com.fasterxml.jackson.databind.JsonNode;
+import tools.jackson.databind.JsonNode;
 import com.hitorro.features.DataType;
 import com.hitorro.features.io.FloatIO;
 import com.hitorro.features.io.IntegerIO;

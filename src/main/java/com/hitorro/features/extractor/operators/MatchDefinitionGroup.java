@@ -21,7 +21,7 @@
  */
 package com.hitorro.features.extractor.operators;
 
-import com.fasterxml.jackson.databind.JsonNode;
+import tools.jackson.databind.JsonNode;
 import com.hitorro.features.Feature;
 import com.hitorro.features.extractor.FeatureExtractor;
 import com.hitorro.util.core.HTAssert;

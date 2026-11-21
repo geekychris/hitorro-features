@@ -21,7 +21,7 @@
  */
 package com.hitorro.features;
 
-import com.fasterxml.jackson.databind.JsonNode;
+import tools.jackson.databind.JsonNode;
 import com.hitorro.features.extractor.ExtractorManager;
 import com.hitorro.features.io.MappingFunction;
 import com.hitorro.util.core.error.ErrorCode;

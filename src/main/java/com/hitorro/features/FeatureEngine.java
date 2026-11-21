@@ -21,7 +21,7 @@
  */
 package com.hitorro.features;
 
-import com.fasterxml.jackson.databind.JsonNode;
+import tools.jackson.databind.JsonNode;
 import gnu.trove.map.hash.TLongObjectHashMap;
 import com.hitorro.features.extractor.ExtractorManager;
 import com.hitorro.features.io.MappingFunction;
